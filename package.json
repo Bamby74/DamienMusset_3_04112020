@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood2",
+  "version": "1.0.0",
+  "description": "Projet OhmyFood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/style.scss:./css/style.css --style nested"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bamby74/DamienMusset_3_04112020.git"
+  },
+  "author": "Bamby74",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bamby74/DamienMusset_3_04112020/issues"
+  },
+  "homepage": "https://github.com/Bamby74/DamienMusset_3_04112020#readme"
+}
