@@ -2,6 +2,20 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA ;
 $color-tertiary: #99E2D0;
 
+$background_1:#eaeaea;
+$background_2:#f6f6f6;
+
+h1{
+    font-family: 'Shrikhand', cursive;
+}
+p{
+    font-family:'Roboto', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
 body{
     margin: 0;
 }
@@ -12,10 +26,56 @@ header{
     display: table-cell;
     vertical-align: middle;
     background: white;
-    box-shadow: 0px 3px 4px -2px grey;
+    box-shadow: 0px 3px 4px -2px black;
     .header__logo{
         max-width: 35%;
         height: auto;       
      } 
-
 }
+.localisation__bar{
+    background-color: $background_1;
+    height: 40px;
+    text-align : center;
+}
+nav{
+    width: 100%;
+    height: 285px ;
+    text-align: center;
+    background-color: $background_2;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 20px 0 20px;
+}
+nav h1{
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.explain{
+    background-color: #FFF;
+}
+.restorant{
+    background-color: $background_2;
+}
+.heading{
+    margin-left: 20px;
+}
+.fiche-restaurant{
+    display: flex;
+    flex-direction: column;
+    width:auto;
+    height: 250px ;
+    margin-left: 20px;
+    margin-right: 20px;
+    background: #FFF;
+    border-radius: 1em;
+    .fiche-restaurant--picture{
+        width: 100%;
+        height: 66%;
+        object-fit: cover;
+        border-top-left-radius: 1em;
+        border-top-right-radius: 1em;
+    }
+}
+
+
