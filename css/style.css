@@ -65,6 +65,8 @@ nav h1 {
 /*Section Explain*/
 .explain {
   background-color: #FFF;
+  margin:40px 0 40px 0;
+  
 }
 .heading {
   margin-left: 20px;
@@ -73,23 +75,43 @@ nav h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 10px;
 }
 .case-explain{
     display: flex;
     align-items: center;
     width: 90%;
-    height: 75px;
-    background: #eaeaea;
+    height: 90px;
+    background: #f6f6f6;
     border-radius: 1em;
-    margin:10px 0 10px 0;
+    margin:20px 0 20px 0;
+    box-shadow: 0 0 1em rgba(114, 109, 109, 0.4); 
+}
+.number-explain{
+    color: #FFF;
+    margin-left: -1px;
+    background-color: #9356DC;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
+    right:15px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px; 
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
 }
 .case-explain p{
     margin-left: 20px;
-    font-weight: 700; 
+    font-weight: 900;
+    font-size:1.1em;
+    font-family: "Shrikhand", cursive;
 }
 .case-explain i{
-    margin-left: 40px;
+    margin-left: 20px;
     color: #7e7e7e;
+    font-size: 1.5em;
 }
 
 /*Section restaurant*/
