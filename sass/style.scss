@@ -1,10 +1,7 @@
 @import "./utils/variables";
 @import "./utils/mixin";
 
-h1{
-    font-family: 'Shrikhand', cursive;
-}
-p{
+h1,p{
     font-family:'Roboto'
 }
 a{
@@ -24,7 +21,7 @@ header{
     align-items:center;
     justify-content: center;
     background: $color-white;
-    box-shadow: 0px 9px 40px -18px black;
+    box-shadow: 0px 12px 50px -18px black;
     .header__logo{
         width: 250px;
         height: auto;       
@@ -38,6 +35,8 @@ header{
     justify-content: center;
     align-items: center;
     margin-top: 1px;
+    font-weight: 500;
+    color: $background-footer;
     .fas{
         width: 20px;
         height: 20px;
@@ -59,6 +58,11 @@ nav{
         margin-top: 0;
         margin-bottom: 0;
     }
+}
+.btn__explore{
+    @include btn;
+    margin-top: 20px;
+    box-shadow: 0 0 0.2em black;
 }
 /*Section Explain*/
 .explain{
@@ -113,11 +117,7 @@ nav{
     margin-left: -3px;
     background-color: $color-primary;
 }
-.btn__explore{
-    @include btn;
-    margin-top: 20px;
-    box-shadow: 0 0 0.2em black;
-}
+
 /*Section Restorant*/
 #restaurant{
     background-color: $background_2;
@@ -158,6 +158,10 @@ nav{
         line-height: 25px;
 
     }
+}
+.name__restaurant{
+    font-family: 'Roboto';
+    font-weight: 900;
 }
 .heart{
     position: absolute;
