@@ -1,15 +1,11 @@
-$color-primary: #9356DC;
-$color-secondary: #FF79DA ;
-$color-tertiary: #99E2D0;
-
-$background_1:#eaeaea;
-$background_2:#f6f6f6;
+@import "./utils/variables";
+@import "./utils/mixin";
 
 h1{
     font-family: 'Shrikhand', cursive;
 }
 p{
-    font-family:'Roboto', sans-serif;
+    font-family:'Roboto'
 }
 a{
     text-decoration: none;
@@ -19,43 +15,115 @@ a{
 body{
     margin: 0;
 }
+/*Header*/
 header{
-    width: 600px;
+    width: 100%;
     height: 65px;
     text-align: center;
-    display: table-cell;
-    vertical-align: middle;
-    background: white;
-    box-shadow: 0px 3px 4px -2px black;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    background: $color-white;
+    box-shadow: 0px 9px 40px -18px black;
     .header__logo{
-        max-width: 35%;
+        width: 250px;
         height: auto;       
      } 
 }
-.localisation__bar{
+/*Localisation*/
+.localisation{
     background-color: $background_1;
     height: 40px;
-    text-align : center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+    .fas{
+        width: 20px;
+        height: 20px;
+    }
 }
+/*NAV*/
 nav{
-    width: 100%;
+    width: auto;
     height: 285px ;
+    background-color: $background_2;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    background-color: $background_2;
-    display: table-cell;
-    vertical-align: middle;
     padding: 0 20px 0 20px;
+    h1{
+        font-size: 1.5rem;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 }
-nav h1{
-    font-size: 1.5rem;
-    margin-top: 0;
-    margin-bottom: 0;
-}
+/*Section Explain*/
 .explain{
-    background-color: #FFF;
+    background-color: $color-white;
+    padding: $padding-section;
+    .fas{
+        margin-left: 10px;
+        color: $color-icone;
+    }
 }
-.restorant{
+.heading{
+    margin-top: 0;
+}
+.container-explain{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px; 
+    p{
+         margin-left: 20px;
+         font-weight: 600;
+    }
+}
+.case-explain{
+    display: flex;
+    align-items: center;
+    background: $background_2;
+    width: 90%;
+    height: 80px;
+    border-radius: 1em;
+    box-shadow: 0 0 0.8em rgba(3, 0, 1, 0.2);
+    &:hover{
+        background: rgba(147, 86, 220,0.2);
+        i{
+        color: $color-primary;
+        }
+    }
+}    
+.number-explain{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
+    right: 10px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+    font-family: "Roboto",sans-serif;
+    color: $color-white;
+    margin-left: -3px;
+    background-color: $color-primary;
+}
+.btn__explore{
+    @include btn;
+    margin-top: 20px;
+    box-shadow: 0 0 0.2em black;
+}
+/*Section Restorant*/
+#restaurant{
     background-color: $background_2;
+    display: flex;
+    flex-direction: column;
+    padding: $padding-section;
 }
 .heading{
     margin-left: 20px;
@@ -64,22 +132,61 @@ nav h1{
     display: flex;
     flex-direction: column;
     width:auto;
-    height: 250px ;
+    height: 200px ;
     margin-left: 20px;
     margin-right: 20px;
-    background: #FFF;
+    margin-top: 20px;
+    background: $color-white;
     border-radius: 1em;
+    box-shadow: $box-shadow;
     .fiche-restaurant--picture{
         width: 100%;
-        height: 66%;
+        height: 70%;
         object-fit: cover;
         border-top-left-radius: 1em;
         border-top-right-radius: 1em;
+    }  
+}
+.fiche-restaurant_name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    margin: 6px 0 6px 10px;
+    p{
+        margin:0;
+        line-height: 25px;
+
     }
 }
-.number-explain{
-    color: #FFF;
-    margin-left: -3px;
-    background-color: $color-primary;
+.heart{
+    position: absolute;
+    left:80%;
 }
 
+/*Footer*/
+footer{
+    @include footer;
+    background: $background-footer;
+    padding-left: 20px;
+    .logo-footer{
+        height: 20px;
+        filter: invert(100%);
+    }
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+.align-item-footer{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    a{
+        color: #FFF;
+    }
+    i{
+        margin-right: 10px;
+        width: 20px;
+    }
+}
