@@ -1,4 +1,107 @@
-h1, p {
+.back-homepage {
+  display: flex;
+  align-items: center;
+  color: #353535;
+}
+.back-homepage .fa-arrow-left {
+  position: absolute;
+  right: 90%;
+  font-size: x-large;
+}
+
+.picture-menu {
+  height: 150px;
+}
+
+.illustration {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.bloc-page {
+  position: relative;
+  z-index: 2;
+  top: 70px;
+}
+
+.fiche-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px 60px 20px;
+  border-top-left-radius: 2em;
+  border-top-right-radius: 2em;
+  background: #f6f6f6;
+}
+
+.plate {
+  margin: 20px 0px 0px 0px;
+  height: 25px;
+}
+
+#surlign {
+  border-bottom: 4px solid #99E2D0;
+  width: 35px;
+}
+
+.card {
+  height: auto;
+  background: #FFF;
+  padding: 10px 20px 10px 10px;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Roboto";
+  font-size: 0.95em;
+  box-shadow: 0 0 0.3em rgba(114, 109, 109, 0.2);
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.card .card-title {
+  font-weight: 700;
+  height: 25px;
+}
+
+.card-subtitle {
+  display: flex;
+  justify-content: space-between;
+  height: 25px;
+  font-weight: 100;
+  height: auto;
+}
+
+.price {
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.bouton {
+  display: grid;
+  justify-items: center;
+}
+
+.btn-booking {
+  width: 220px;
+  height: 50px;
+  background-image: linear-gradient(160deg, #FF79DA, #9356DC);
+  border-radius: 2em;
+  color: #FFF;
+  box-shadow: 0 0 0.2em black;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+  display: block;
+}
+.btn-booking:hover {
+  opacity: 70%;
+}
+
+h1 {
+  font-family: "Shrikhand";
+}
+
+h2, p {
   font-family: "Roboto";
 }
 
@@ -23,7 +126,7 @@ header {
   box-shadow: 0px 12px 50px -18px black;
 }
 header .header__logo {
-  width: 250px;
+  width: 200px;
   height: auto;
 }
 
@@ -67,10 +170,10 @@ nav h1 {
   background-image: linear-gradient(160deg, #FF79DA, #9356DC);
   border-radius: 2em;
   color: #FFF;
-  box-shadow: 0 0 0.3em rgba(3, 1, 0, 0.5);
-  font-weight: bold;
-  margin-top: 20px;
   box-shadow: 0 0 0.2em black;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
 }
 .btn__explore:hover {
   opacity: 70%;
@@ -169,7 +272,7 @@ nav h1 {
 .fiche-restaurant_name {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: left;
   height: auto;
   margin: 6px 0 6px 10px;
 }

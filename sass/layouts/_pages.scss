@@ -1,0 +1,77 @@
+.back-homepage{
+    display: flex;
+    align-items: center;
+    color: $background-footer;
+
+    .fa-arrow-left{
+        position: absolute;
+        right: 90%;
+        font-size: x-large;
+    }    
+}
+.picture-menu{
+    height: 150px;
+}
+.illustration{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+.bloc-page{
+    position: relative;
+    z-index: 2;
+    top: 70px;
+}
+.fiche-menu{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px 60px 20px;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    background:$background_2; 
+}
+.plate{
+    margin: $margin-plate;
+    height: 25px;
+}
+#surlign{
+    border-bottom: 4px solid $color-tertiary;
+    width: 35px;
+}
+.card{
+    height: auto;
+    background: #FFF;
+    padding: 10px 20px 10px 10px;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Roboto';
+    font-size: 0.95em;
+    box-shadow: $box-shadow;
+    @include margin-card(15px);
+    .card-title{
+        font-weight: 700;
+        height: 25px;
+    }
+}
+.card-subtitle{
+    display: flex;
+    justify-content: space-between;
+    height: 25px;
+    font-weight: 100;
+    height: auto;
+}
+.price{
+    font-weight: 700;
+    margin-left: 10px;
+}
+.bouton{
+    display: grid;
+    justify-items: center;
+}
+.btn-booking{
+    @include btn;
+    margin-top: 30px;
+    display: block;
+}

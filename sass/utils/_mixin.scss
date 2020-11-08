@@ -4,8 +4,9 @@
     background-image:linear-gradient(160deg,$color-secondary,$color-primary);
     border-radius: 2em;
     color:$color-white;
-    box-shadow: 0 0 0.3em rgba(3,1,0,0.5);
+    box-shadow: 0 0 0.2em black;
     font-weight: bold;
+    text-align: center;
     &:hover{
         opacity: 70%;
     }
@@ -14,4 +15,8 @@
     color: invert($color: #000000);
     padding: $padding-section;
     font-weight: bold;
+}
+@mixin margin-card($size:7px){
+    margin-top: $size;
+    margin-bottom:$size;
 }
