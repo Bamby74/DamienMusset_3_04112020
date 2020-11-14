@@ -1,0 +1,9 @@
+.button{
+    display: grid;
+    justify-items: center;
+    .btn-booking{
+        @include btn;
+        margin-top: 30px;
+        display: block;
+    }
+}

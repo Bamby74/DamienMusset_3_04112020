@@ -1,3 +1,17 @@
+h1{
+    font-family: 'Shrikhand';
+}
+h2,p{
+    font-family:'Roboto'
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+body{
+    margin: 0;
+}
 .back-homepage{
     display: flex;
     align-items: center;
@@ -41,7 +55,7 @@
 .card{
     height: auto;
     background: #FFF;
-    padding: 10px 20px 10px 10px;
+    padding: $padding-card;
     border-radius: 1em;
     display: flex;
     flex-direction: column;
@@ -54,24 +68,18 @@
         font-weight: 700;
         height: 25px;
     }
+    .card-subtitle{
+        display: flex;
+        justify-content: space-between;
+        height: 25px;
+        font-weight: 100;
+        height: auto;
+        & > .price{
+            font-weight: 700;
+            margin-left: 10px;
+        }
+    }
 }
-.card-subtitle{
-    display: flex;
-    justify-content: space-between;
-    height: 25px;
-    font-weight: 100;
-    height: auto;
-}
-.price{
-    font-weight: 700;
-    margin-left: 10px;
-}
-.bouton{
-    display: grid;
-    justify-items: center;
-}
-.btn-booking{
-    @include btn;
-    margin-top: 30px;
-    display: block;
-}
+
+
+
