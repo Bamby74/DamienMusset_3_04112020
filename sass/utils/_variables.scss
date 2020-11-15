@@ -5,6 +5,7 @@ $color-secondary: #FF79DA ;
 $color-tertiary: #99E2D0;
 $color-white:#FFF;
 $color-icone:#7e7e7e;
+$clr-btn:linear-gradient(160deg,$color-secondary,$color-primary);
 
 $background_1:#eaeaea;
 $background_2:#f6f6f6;
@@ -15,3 +16,6 @@ $padding-card:10px 10px 10px 10px;
 $box-shadow:0 0 0.3em rgba(114,109,109,0.2);
 
 $margin-plate: 20px 0px 0px 0px;
+
+$heart-transition: 500ms;
+$heart-font-size: 1.5em;

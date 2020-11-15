@@ -75,7 +75,7 @@ body {
   margin-bottom: 15px;
 }
 .card:hover > .checkbox {
-  transform: scaleX(1);
+  transform: translate(0px, 0);
   width: 90px;
 }
 .card .card-text {
@@ -100,8 +100,9 @@ body {
   margin-left: 10px;
 }
 .card .checkbox {
+  flex-shrink: 1;
   display: flex;
-  width: 0px;
+  width: 90px;
   height: auto;
   justify-content: center;
   align-items: center;
@@ -110,8 +111,7 @@ body {
   border-top-right-radius: 1em;
   border-bottom-right-radius: 1em;
   background-color: #99E2D0;
-  transform: scaleX(0);
-  transform-origin: right;
+  transform: translate(90px, 0);
   transition: all 700ms;
 }
 .card .checkbox .fas {
@@ -124,12 +124,6 @@ body {
 .card:hover .fas {
   transform: rotate(360deg);
 }
-.card:focus .fas {
-  color: #9356DC;
-}
-.card:focus .fas .checkbox {
-  width: 90px;
-}
 
 .button {
   display: grid;
@@ -138,18 +132,20 @@ body {
 .button .btn-booking {
   width: 220px;
   height: 50px;
-  background-image: linear-gradient(160deg, #FF79DA, #9356DC);
+  background: linear-gradient(160deg, #FF79DA, #9356DC);
   border-radius: 2em;
   color: #FFF;
   box-shadow: 0 0 0.2em black;
   font-family: "Roboto";
   font-weight: bold;
   text-align: center;
+  opacity: 1;
+  transition: opacity 300ms;
   margin-top: 30px;
   display: block;
 }
 .button .btn-booking:hover {
-  opacity: 70%;
+  opacity: 0.7;
 }
 
 /*Header*/
@@ -219,17 +215,19 @@ nav h1 {
 .btn__explore {
   width: 220px;
   height: 50px;
-  background-image: linear-gradient(160deg, #FF79DA, #9356DC);
+  background: linear-gradient(160deg, #FF79DA, #9356DC);
   border-radius: 2em;
   color: #FFF;
   box-shadow: 0 0 0.2em black;
   font-family: "Roboto";
   font-weight: bold;
   text-align: center;
+  opacity: 1;
+  transition: opacity 300ms;
   margin-top: 20px;
 }
 .btn__explore:hover {
-  opacity: 70%;
+  opacity: 0.7;
 }
 
 /*Section Explain*/
@@ -359,8 +357,31 @@ nav h1 {
   line-height: 25px;
   vertical-align: middle;
 }
+.fiche-restaurant_name .heart:hover > .fas {
+  opacity: 1;
+}
+.fiche-restaurant_name .heart:hover > .far {
+  opacity: 0;
+}
 .fiche-restaurant_name .heart .far {
   font-size: 1.5em;
+  position: relative;
+  background: transparent;
+  opacity: 1;
+  transition: opacity 500ms;
+  transform-origin: bottom;
+}
+.fiche-restaurant_name .heart > .fas {
+  font-size: 1.5em;
+  color: transparent;
+  background: linear-gradient(160deg, #FF79DA, #9356DC);
+  background: clip;
+  -webkit-background-clip: text;
+  position: absolute;
+  right: 40px;
+  opacity: 0;
+  transition: opacity 500ms;
+  transform-origin: bottom;
 }
 .fiche-restaurant_name .name__restaurant {
   font-family: "Roboto";

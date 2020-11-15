@@ -183,8 +183,31 @@ nav{
     .heart{
         line-height: 25px;
         vertical-align: middle;
+        &:hover > .fas{
+            opacity: 1;
+         }
+        &:hover > .far{
+            opacity: 0;
+        }
         .far{
-            font-size: 1.5em;    
+            font-size: $heart-font-size;
+            position: relative;
+            background: transparent;
+            opacity:1;
+            transition: opacity $heart-transition;
+            transform-origin: bottom;
+        }
+        & > .fas{
+            font-size: $heart-font-size;
+            color: transparent;
+            background:$clr-btn;
+            background: clip;
+            -webkit-background-clip: text;
+            position: absolute;
+            right: 40px;
+            opacity: 0;
+            transition: opacity $heart-transition;
+            transform-origin: bottom;
         }
     }
     .name__restaurant{

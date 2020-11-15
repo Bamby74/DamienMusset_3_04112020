@@ -64,7 +64,7 @@ body{
     box-shadow: $box-shadow;
     @include margin-card(15px);
     &:hover > .checkbox,{
-            transform: scaleX(1);
+            transform: translate(0px,0);
             width:90px;
     }
     .card-text{
@@ -89,8 +89,9 @@ body{
         }
     }
     .checkbox{
+        flex-shrink: 1;
         display: flex;
-        width: 0px;
+        width: 90px;
         height: auto;
         justify-content: center;
         align-items: center;
@@ -99,8 +100,7 @@ body{
         border-top-right-radius: 1em;
         border-bottom-right-radius: 1em;
         background-color: $color-tertiary;
-        transform: scaleX(0);
-        transform-origin: right;
+        transform: translate(90px,0);
         transition: all 700ms;    
         .fas{
             color: #FFF;
@@ -113,12 +113,6 @@ body{
 .card{
     &:hover .fas{
     transform: rotate(360deg);
-    }
-    &:focus .fas{
-        color: $color-primary;
-        .checkbox{
-            width: 90px;
-        }
     }
 }
 
