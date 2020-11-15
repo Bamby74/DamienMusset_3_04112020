@@ -62,33 +62,73 @@ body {
 }
 
 .card {
-  height: auto;
-  background: #FFF;
-  padding: 10px 20px 10px 10px;
-  border-radius: 1em;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  background: #FFF;
+  width: 100%;
+  height: auto;
   font-family: "Roboto";
+  overflow: hidden;
   font-size: 0.95em;
+  border-radius: 1em;
   box-shadow: 0 0 0.3em rgba(114, 109, 109, 0.2);
   margin-top: 15px;
   margin-bottom: 15px;
 }
-.card .card-title {
+.card:hover > .checkbox {
+  transform: scaleX(1);
+  width: 90px;
+}
+.card .card-text {
+  background: #FFF;
+  width: 100%;
+  position: relative;
+  padding: 10px 10px 10px 10px;
+}
+.card .card-text .card-title {
   font-weight: 700;
   height: 25px;
 }
-.card .card-subtitle {
+.card .card-text .card-subtitle {
   display: flex;
   justify-content: space-between;
   height: 25px;
   font-weight: 100;
   height: auto;
 }
-.card .card-subtitle > .price {
+.card .card-text .card-subtitle > .price {
   font-weight: 700;
   margin-left: 10px;
+}
+.card .checkbox {
+  display: flex;
+  width: 0px;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  text-align: center;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  background-color: #99E2D0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: all 700ms;
+}
+.card .checkbox .fas {
+  color: #FFF;
+  font-size: 1.7em;
+  transform: rotate(90deg);
+  transition: transform 0.5s 0.2s;
+}
+
+.card:hover .fas {
+  transform: rotate(360deg);
+}
+.card:focus .fas {
+  color: #9356DC;
+}
+.card:focus .fas .checkbox {
+  width: 90px;
 }
 
 .button {
@@ -380,6 +420,58 @@ ul {
 .align-item-footer i {
   margin-right: 10px;
   width: 20px;
+}
+
+/*@keyframes slidebox {
+    from{
+        transform: translateX(75px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}*/
+@keyframes card-coming {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  /*10%{
+      opacity: 0.3;
+  }*/
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.card {
+  animation: card-coming 1200ms backwards;
+}
+.card--1 {
+  animation-delay: 120ms;
+}
+.card--2 {
+  animation-delay: 240ms;
+}
+.card--3 {
+  animation-delay: 360ms;
+}
+.card--4 {
+  animation-delay: 480ms;
+}
+.card--5 {
+  animation-delay: 600ms;
+}
+.card--6 {
+  animation-delay: 720ms;
+}
+.card--7 {
+  animation-delay: 840ms;
+}
+.card--8 {
+  animation-delay: 960ms;
+}
+.card--9 {
+  animation-delay: 1080ms;
 }
 
 /*# sourceMappingURL=style.css.map */

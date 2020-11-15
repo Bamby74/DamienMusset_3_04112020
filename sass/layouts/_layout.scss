@@ -53,33 +53,75 @@ body{
     width: 35px;
 }
 .card{
-    height: auto;
-    background: #FFF;
-    padding: $padding-card;
-    border-radius: 1em;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-family: 'Roboto';
+    background: #FFF;
+    width: 100%;
+    height: auto;
+    font-family: $font;
+    overflow: hidden;
     font-size: 0.95em;
+    border-radius: 1em;
     box-shadow: $box-shadow;
     @include margin-card(15px);
-    .card-title{
-        font-weight: 700;
-        height: 25px;
+    &:hover > .checkbox,{
+            transform: scaleX(1);
+            width:90px;
     }
-    .card-subtitle{
-        display: flex;
-        justify-content: space-between;
-        height: 25px;
-        font-weight: 100;
-        height: auto;
-        & > .price{
+    .card-text{
+        background: #FFF;
+        width: 100%;
+        position: relative;
+        padding: $padding-card;
+        .card-title{
             font-weight: 700;
-            margin-left: 10px;
+            height: 25px;
+        }
+        .card-subtitle{
+            display: flex;
+            justify-content: space-between;
+            height: 25px;
+            font-weight: 100;
+            height: auto;
+            & > .price{
+                font-weight: 700;
+                margin-left: 10px;
+            }
+        }
+    }
+    .checkbox{
+        display: flex;
+        width: 0px;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+        text-align: center;
+        border-top-right-radius: 1em;
+        border-bottom-right-radius: 1em;
+        background-color: $color-tertiary;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: all 700ms;    
+        .fas{
+            color: #FFF;
+            font-size: 1.7em;
+            transform: rotate(90deg);
+            transition: transform 0.5s 0.2s;
+        }
+    }
+ }
+.card{
+    &:hover .fas{
+    transform: rotate(360deg);
+    }
+    &:focus .fas{
+        color: $color-primary;
+        .checkbox{
+            width: 90px;
         }
     }
 }
+
 
 
 
