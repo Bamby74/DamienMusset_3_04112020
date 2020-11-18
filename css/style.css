@@ -91,6 +91,11 @@ body {
   margin-top: 15px;
   margin-bottom: 15px;
 }
+@media only screen and (min-width: 1080px) {
+  .card {
+    width: 95%;
+  }
+}
 .card:hover > .checkbox {
   transform: translate(0px, 0);
   width: 90px;

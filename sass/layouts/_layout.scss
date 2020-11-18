@@ -77,6 +77,9 @@ body{
     border-radius: 1em;
     box-shadow: $box-shadow;
     @include margin-card(15px);
+    @include computer{
+        width: 95%;
+    }
     &:hover > .checkbox,{
             transform: translate(0px,0);
             width:90px;
