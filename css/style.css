@@ -1,3 +1,4 @@
+/*Media Queries*/
 h1 {
   font-family: "Shrikhand";
 }
@@ -47,14 +48,24 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+.title-menu h1 {
+  font-size: 1.7em;
+}
 
-.fiche-menu {
+.menu {
   display: flex;
   flex-direction: column;
-  padding: 10px 20px 60px 20px;
+  padding: 10px 20px 10px 20px;
   border-top-left-radius: 2em;
   border-top-right-radius: 2em;
   background: #f6f6f6;
+}
+
+@media only screen and (min-width: 1080px) {
+  .fiche-menu {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .plate {
@@ -143,6 +154,14 @@ body {
 }
 
 .button {
+  background: #f6f6f6;
+}
+.button .booking-menu {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.button {
   display: grid;
   justify-items: center;
 }
@@ -180,19 +199,18 @@ body {
   position: relative;
   background: transparent;
   opacity: 1;
-  transition: opacity 500ms;
+  transition: opacity 300ms;
   transform-origin: bottom;
 }
 #restaurant .list-restaurant .fiche-restaurant .heart > .fas, .heart-menu > .fas {
   font-size: 1.5em;
   color: transparent;
   background: linear-gradient(160deg, #FF79DA, #9356DC);
-  background: clip;
   -webkit-background-clip: text;
   position: relative;
   right: 24px;
   opacity: 0;
-  transition: opacity 500ms;
+  transition: opacity 300ms;
   transform-origin: bottom;
 }
 
@@ -287,11 +305,11 @@ nav .btn__explore:hover {
     padding: 40px 20px 40px 20px;
   }
 }
-.explain h1 {
-  margin-left: 20px;
-}
 .explain .heading {
   margin-top: 0;
+  margin-left: 20px;
+  font-weight: 700;
+  font-size: 1.7em;
 }
 .explain .fas {
   margin-left: 10px;
@@ -367,6 +385,8 @@ nav .btn__explore:hover {
 }
 #restaurant .heading {
   margin-left: 20px;
+  font-weight: 700;
+  font-size: 1.7em;
 }
 @media only screen and (min-width: 750px) {
   #restaurant .list-restaurant {

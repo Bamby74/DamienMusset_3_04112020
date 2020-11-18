@@ -73,11 +73,9 @@ nav{
     @include large-mobile{
         padding: 40px 20px 40px 20px;
     }
-    h1{
-        margin-left: 20px;
-    }
     .heading{
         margin-top: 0;
+       @include heading;
     }
     .fas{
         margin-left: 10px;
@@ -146,7 +144,7 @@ nav{
         padding-right: 20px;
     }
     .heading{
-        margin-left: 20px;
+        @include heading;
     }
     .list-restaurant{
         @include large-mobile{

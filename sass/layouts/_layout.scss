@@ -40,14 +40,23 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    h1{
+        font-size: 1.7em;
+    }
 }
-.fiche-menu{
+.menu{
     display: flex;
     flex-direction: column;
-    padding: 10px 20px 60px 20px;
+    padding: 10px 20px 10px 20px;
     border-top-left-radius: 2em;
     border-top-right-radius: 2em;
     background:$background_2; 
+}
+.fiche-menu{
+    @include computer{
+        display: flex;
+        justify-content: space-between;
+    }
 }
 .plate{
     margin: $margin-plate;
@@ -133,3 +142,11 @@ body{
     float: right;
     @extend %heart;
 }
+.button{
+    background: $background_2;
+    .booking-menu{
+        margin-top: 10px;
+        margin-bottom: 40px;
+    }
+}
+

@@ -16,20 +16,30 @@
         opacity: 0.7;
     }
 }
+@mixin heading{
+    margin-left: 20px;
+    font-weight: 700;
+    font-size: 1.7em;
+}
+
 @mixin footer{
     color: invert($color: #000000);
     padding: $padding-section;
     font-weight: bold;
 }
+
 @mixin margin-card($size:7px){
     margin-top: $size;
     margin-bottom:$size;
 }
+
+$heart-transition: 300ms;
+$heart-font-size: 1.5em;
+
 @mixin heart-color{
     font-size: $heart-font-size;
     color: transparent;
     background:$clr-btn;
-    background: clip;
     -webkit-background-clip: text;
     position: relative;
     right: 24px;
@@ -48,10 +58,9 @@
 }
 
 
+/*Media Queries*/
 
 $breakpoints: (
-    small-mobile: 400px,
-    medium-mobile: 550px,
     large-mobile: 750px,
     computer: 1080px
 );
