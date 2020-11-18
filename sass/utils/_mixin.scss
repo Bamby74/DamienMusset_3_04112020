@@ -25,3 +25,46 @@
     margin-top: $size;
     margin-bottom:$size;
 }
+@mixin heart-color{
+    font-size: $heart-font-size;
+    color: transparent;
+    background:$clr-btn;
+    background: clip;
+    -webkit-background-clip: text;
+    position: relative;
+    right: 24px;
+    opacity: 0;
+    transition: opacity $heart-transition;
+    transform-origin: bottom;
+}
+
+@mixin heart-empty{
+    font-size: $heart-font-size;
+    position: relative;
+    background: transparent;
+    opacity:1;
+    transition: opacity $heart-transition;
+    transform-origin: bottom;
+}
+
+
+
+$breakpoints: (
+    small-mobile: 400px,
+    medium-mobile: 550px,
+    large-mobile: 750px,
+    computer: 1080px
+);
+
+@mixin large-mobile {
+    @media only screen and (min-width:map-get($breakpoints, large-mobile)){
+        @content;
+    }
+}
+
+@mixin  computer {
+    @media only screen and (min-width:map-get($breakpoints,computer)){
+        @content;
+    }
+    
+}

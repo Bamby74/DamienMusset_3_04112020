@@ -7,3 +7,20 @@
         display: block;
     }
 }
+
+%heart{
+    line-height: 25px;
+    vertical-align: middle;
+    &:hover > .fas{
+        opacity: 1;
+    }
+    &:hover > .far{
+        opacity: 0;
+    }
+    .far{
+        @include heart-empty;
+    }
+    & > .fas{
+        @include heart-color;
+    }
+}
