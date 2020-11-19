@@ -62,7 +62,7 @@ body{
     margin: $margin-plate;
     height: 25px;
 }
-#surlign{
+.surlign{
     border-bottom: 4px solid $color-tertiary;
     width: 35px;
 }
@@ -84,6 +84,9 @@ body{
             transform: translate(0px,0);
             width:90px;
     }
+    &:hover > .price{
+            transform:translate(70px,0);
+    }
     .card-text{
         background: #FFF;
         width: 100%;
@@ -99,6 +102,7 @@ body{
         .card-subtitle{
             display: flex;
             justify-content: space-between;
+            width: 99% ;
             height: 25px;
             max-height: 25px;
             font-weight: 100;
@@ -112,6 +116,9 @@ body{
             & > .price{
                 font-weight: 700;
                 margin-left: 10px;
+                margin-right: 10px;
+                transform: translate(0px,0);
+                transition: all 700ms;  
             }
         }
     }
@@ -125,7 +132,7 @@ body{
         border-top-right-radius: 1em;
         border-bottom-right-radius: 1em;
         background-color: $color-tertiary;
-        transform: translate(90px,0);
+        transform: translate(60px,0);
         transition: all 700ms;    
         .fas{
             color: #FFF;
@@ -152,4 +159,10 @@ body{
         margin-bottom: 40px;
     }
 }
-
+/*Input*/
+[id="like"]:checked + label >.fas{
+    
+}
+[id="like"]:checked + label >.far{
+    visibility: hidden;
+}

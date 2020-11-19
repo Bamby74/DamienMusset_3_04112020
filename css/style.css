@@ -73,7 +73,7 @@ body {
   height: 25px;
 }
 
-#surlign {
+.surlign {
   border-bottom: 4px solid #99E2D0;
   width: 35px;
 }
@@ -100,6 +100,9 @@ body {
   transform: translate(0px, 0);
   width: 90px;
 }
+.card:hover > .price {
+  transform: translate(70px, 0);
+}
 .card .card-text {
   background: #FFF;
   width: 100%;
@@ -115,6 +118,7 @@ body {
 .card .card-text .card-subtitle {
   display: flex;
   justify-content: space-between;
+  width: 99%;
   height: 25px;
   max-height: 25px;
   font-weight: 100;
@@ -129,6 +133,9 @@ body {
 .card .card-text .card-subtitle > .price {
   font-weight: 700;
   margin-left: 10px;
+  margin-right: 10px;
+  transform: translate(0px, 0);
+  transition: all 700ms;
 }
 .card .checkbox {
   display: flex;
@@ -140,7 +147,7 @@ body {
   border-top-right-radius: 1em;
   border-bottom-right-radius: 1em;
   background-color: #99E2D0;
-  transform: translate(90px, 0);
+  transform: translate(60px, 0);
   transition: all 700ms;
 }
 .card .checkbox .fas {
@@ -164,6 +171,11 @@ body {
 .button .booking-menu {
   margin-top: 10px;
   margin-bottom: 40px;
+}
+
+/*Input*/
+[id=like]:checked + label > .far {
+  visibility: hidden;
 }
 
 .button {
@@ -207,7 +219,7 @@ body {
   transition: opacity 300ms;
   transform-origin: bottom;
 }
-#restaurant .list-restaurant .fiche-restaurant .heart > .fas, .heart-menu > .fas {
+#restaurant .list-restaurant .fiche-restaurant .heart .fas, .heart-menu .fas {
   font-size: 1.5em;
   color: transparent;
   background: linear-gradient(160deg, #FF79DA, #9356DC);

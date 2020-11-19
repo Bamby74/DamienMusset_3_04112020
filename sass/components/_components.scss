@@ -20,7 +20,7 @@
     .far{
         @include heart-empty;
     }
-    & > .fas{
+    .fas{
         @include heart-color;
     }
 }
