@@ -64,10 +64,16 @@ $heart-font-size: 1.5em;
 /*Media Queries*/
 
 $breakpoints: (
+    mobile: 500px,
     large-mobile: 750px,
     computer: 1080px
 );
 
+@mixin mobile{
+    @media only screen and (min-width:map-get($breakpoints,mobile)){
+        @content;
+    }
+}
 @mixin large-mobile {
     @media only screen and (min-width:map-get($breakpoints, large-mobile)){
         @content;

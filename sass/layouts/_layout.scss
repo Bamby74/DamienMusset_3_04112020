@@ -25,6 +25,9 @@ body{
 }
 .picture-menu{
     height: 150px;
+    @include mobile{
+        display: none;
+    }
 }
 .illustration{
     width: 100%;
@@ -35,12 +38,23 @@ body{
     position: relative;
     z-index: 2;
     top: 70px;
+    @include mobile{
+        top:0px;
+        background: #fff;
+    }
 }
 .title-menu{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 400px;
+    width: 100%;
+    @include mobile {
+        width: 400px;
+        font-size: 1em;
+    }
+    @include computer {
+        width: 100%;
+    }
     h1{
         font-size: 1.7em;
     }
@@ -53,17 +67,42 @@ body{
     border-top-right-radius: 2em;
     background:$background_2; 
     align-items: center;
+    @include mobile{
+        background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash2.jpg");
+        background-size: cover;
+    }
+    @include computer{
+        align-items: none ;
+    }
 }
+
 .fiche-menu{
-    width: 430px;
+    width: 100%;
+    @include mobile{
+        width: 400px;
+    }
     @include computer{
         display: flex;
         justify-content: space-between;
+        width: 100%;
     }
 }
 .plate{
     margin: $margin-plate;
     height: 25px;
+    @include mobile{
+        font-weight: bold;
+        line-height: 25px;
+    }
+    &.entrance{
+        width: 70px;
+    }
+    &.middle{
+        width: 50px;
+    }
+    &.dessert{
+        width: 80px;
+    }
 }
 .surlign{
     border-bottom: 4px solid $color-tertiary;
@@ -82,15 +121,15 @@ body{
     box-shadow: $box-shadow;
     background: #fff;
     @include margin-card(15px);
-    @include computer;
     cursor: pointer;
     &:hover > .checkbox {
         transform: translate(0px, 0);
     }
     &:hover > .price{
-        transform: translateX(-70px)
+        transform: translateX(-60px)
     }
     &:hover > .card-subtitle{
+        width: 100%;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -122,6 +161,7 @@ body{
     }
     .card-subtitle{ 
         margin: 0;
+        width: 100%;
         height: 25px;
         max-height: 25px;
         line-height: 25px;

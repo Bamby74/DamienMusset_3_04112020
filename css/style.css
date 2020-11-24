@@ -30,6 +30,11 @@ body {
 .picture-menu {
   height: 150px;
 }
+@media only screen and (min-width: 500px) {
+  .picture-menu {
+    display: none;
+  }
+}
 
 .illustration {
   width: 100%;
@@ -42,12 +47,29 @@ body {
   z-index: 2;
   top: 70px;
 }
+@media only screen and (min-width: 500px) {
+  .bloc-page {
+    top: 0px;
+    background: #fff;
+  }
+}
 
 .title-menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 400px;
+  width: 100%;
+}
+@media only screen and (min-width: 500px) {
+  .title-menu {
+    width: 400px;
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 1080px) {
+  .title-menu {
+    width: 100%;
+  }
 }
 .title-menu h1 {
   font-size: 1.7em;
@@ -62,20 +84,52 @@ body {
   background: #f6f6f6;
   align-items: center;
 }
+@media only screen and (min-width: 500px) {
+  .menu {
+    background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash2.jpg");
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 1080px) {
+  .menu {
+    align-items: none;
+  }
+}
 
 .fiche-menu {
-  width: 430px;
+  width: 100%;
+}
+@media only screen and (min-width: 500px) {
+  .fiche-menu {
+    width: 400px;
+  }
 }
 @media only screen and (min-width: 1080px) {
   .fiche-menu {
     display: flex;
     justify-content: space-between;
+    width: 100%;
   }
 }
 
 .plate {
   margin: 20px 0px 0px 0px;
   height: 25px;
+}
+@media only screen and (min-width: 500px) {
+  .plate {
+    font-weight: bold;
+    line-height: 25px;
+  }
+}
+.plate.entrance {
+  width: 70px;
+}
+.plate.middle {
+  width: 50px;
+}
+.plate.dessert {
+  width: 80px;
 }
 
 .surlign {
@@ -103,9 +157,10 @@ body {
   transform: translate(0px, 0);
 }
 .card:hover > .price {
-  transform: translateX(-70px);
+  transform: translateX(-60px);
 }
 .card:hover > .card-subtitle {
+  width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -137,6 +192,7 @@ body {
 }
 .card-text .card-subtitle {
   margin: 0;
+  width: 100%;
   height: 25px;
   max-height: 25px;
   line-height: 25px;
