@@ -79,7 +79,7 @@ body{
 .fiche-menu{
     width: 100%;
     @include mobile{
-        width: 400px;
+        width: 420px;
     }
     @include computer{
         display: flex;
@@ -152,8 +152,7 @@ body{
     max-height: 70px;
     padding: $padding-card; 
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    
     
     .card-title{
         font-weight: 700;
@@ -165,10 +164,9 @@ body{
         height: 25px;
         max-height: 25px;
         line-height: 25px;
-        white-space: nowrap;
-        /*white-space: nowrap;
         overflow: hidden;
-        text-overflow: ellipsis;*/
+        text-overflow: ellipsis;
+        
     }
 }
 .price{
