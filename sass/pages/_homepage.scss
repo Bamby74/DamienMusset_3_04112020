@@ -5,8 +5,8 @@
         color: $color-tertiary;
         font-size: 5em;
         position: absolute;
-        left: 50%;
-        top: 50%;
+        left: 40%;
+        top: 40%;
         opacity: 0;
     }
 }
@@ -283,12 +283,4 @@ footer{
         }
     }
 }
-[id="like"]:checked + label + .fas{
-    opacity: 1;
-    transition: none;
-    
-}
-[id="like"]:checked + label .far{
-    opacity:0;
-    visibility: hidden;
-}
+

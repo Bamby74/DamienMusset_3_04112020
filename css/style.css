@@ -140,7 +140,7 @@ body {
 .card {
   display: flex;
   width: 100%;
-  height: 70px;
+  height: 80px;
   font-family: "Roboto";
   overflow: hidden;
   font-size: 0.95em;
@@ -178,22 +178,20 @@ body {
 }
 
 .card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: #FFF;
   width: 90%;
-  max-height: 70px;
+  height: auto;
   padding: 10px 10px 10px 10px;
-  white-space: nowrap;
 }
 .card-text .card-title {
   font-weight: 700;
-  height: 25px;
 }
 .card-text .card-subtitle {
   margin: 0;
   width: 100%;
-  height: 25px;
-  max-height: 25px;
-  line-height: 25px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -311,8 +309,8 @@ body {
   color: #99E2D0;
   font-size: 5em;
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 40%;
+  top: 40%;
   opacity: 0;
 }
 
@@ -620,16 +618,6 @@ footer .align-item-footer i {
     flex-direction: column;
     align-items: center;
   }
-}
-
-[id=like]:checked + label + .fas {
-  opacity: 1;
-  transition: none;
-}
-
-[id=like]:checked + label .far {
-  opacity: 0;
-  visibility: hidden;
 }
 
 @keyframes card-coming {
