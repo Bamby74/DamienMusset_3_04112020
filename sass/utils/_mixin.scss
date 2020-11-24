@@ -49,6 +49,7 @@ $heart-font-size: 1.5em;
     opacity: 0;
     transition: opacity $heart-transition;
     transform-origin: bottom;
+    animation: heart-color 700ms linear;
 }
 
 @mixin heart-empty{
@@ -58,6 +59,7 @@ $heart-font-size: 1.5em;
     opacity:1;
     transition: opacity $heart-transition;
     transform-origin: bottom;
+    
 }
 
 

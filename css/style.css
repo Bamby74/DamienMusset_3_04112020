@@ -309,6 +309,7 @@ body {
   opacity: 0;
   transition: opacity 1000ms;
   transform-origin: bottom;
+  animation: heart-color 700ms linear;
 }
 
 /*Loader*/
