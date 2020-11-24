@@ -154,10 +154,14 @@ body {
   cursor: pointer;
 }
 .card:hover > .checkbox {
-  transform: translate(0px, 0);
+  -moz-transform: translate(0px, 0);
+  -webkit-transform: translate(0px, 0);
+  -ms-transform: translate(0px, 0);
 }
 .card:hover > .price {
-  transform: translateX(-60px);
+  -moz-transform: translateX(-60px);
+  -webkit-transform: translateX(-60px);
+  -ms-transform: translateX(-60px);
 }
 .card:hover > .card-subtitle {
   width: 100%;
@@ -199,7 +203,9 @@ body {
 .price {
   height: 100%;
   width: 10%;
-  transform: translateX(-10px);
+  -moz-transform: translateX(-10px);
+  -webkit-transform: translateX(-10px);
+  -ms-transform: translateX(-10px);
   transition: all 700ms;
   translate: 70px 0px;
 }
@@ -221,7 +227,9 @@ body {
   border-top-right-radius: 1em;
   border-bottom-right-radius: 1em;
   background-color: #99E2D0;
-  transform: translate(70px, 0);
+  -moz-transform: translate(70px, 0);
+  -webkit-transform: translate(70px, 0);
+  -ms-transform: translate(70px, 0);
   transition: all 700ms;
 }
 .checkbox .fas {
