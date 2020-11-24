@@ -1,12 +1,5 @@
-/*@keyframes slidebox {
-    from{
-        transform: translateX(75px);
-    }
-    to{
-        transform: translateX(0px);
-    }
-}*/
-$card-numbers:9!default;
+
+$card-numbers:10!default;
 $card-coming-dur:1200ms;
 $card-coming-delay:$card-coming-dur / $card-numbers;
 $card-coming-translate: 20px;
@@ -29,5 +22,59 @@ $card-coming-translate: 20px;
         &--#{$i} {
             animation-delay: $card-coming-delay * $i;
         }
+    }
+}
+
+
+
+
+@keyframes loader {
+    0%{
+        
+    }
+    5%{
+        opacity:1;
+    }
+    16%{
+        transform: rotate(360deg);
+        opacity:1;
+        color: $color-primary;
+    }
+    33%{
+        transform:rotate(720deg);
+        opacity:1;
+        color: $color-secondary;
+    }
+    50%{
+        transform:rotate(1080deg);
+        opacity:1;
+        color:$color-tertiary;
+    }
+    67%{
+        transform: rotate(1440deg);
+        opacity:1;
+        color: $color-secondary;
+    }
+    83%{
+        transform: rotate(1800deg);
+        opacity:1;
+        color: $color-primary;
+    }
+    100%{
+        transform: rotate(2160deg);
+    }
+}
+
+$pages-dur: 4000ms;
+
+@keyframes pages {
+    0%{
+        opacity: 0;
+    }
+    66%{
+        opacity: 0.1;
+    }
+    100%{
+        opacity: 1;
     }
 }

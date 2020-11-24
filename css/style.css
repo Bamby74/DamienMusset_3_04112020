@@ -47,6 +47,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 400px;
 }
 .title-menu h1 {
   font-size: 1.7em;
@@ -59,8 +60,12 @@ body {
   border-top-left-radius: 2em;
   border-top-right-radius: 2em;
   background: #f6f6f6;
+  align-items: center;
 }
 
+.fiche-menu {
+  width: 430px;
+}
 @media only screen and (min-width: 1080px) {
   .fiche-menu {
     display: flex;
@@ -80,66 +85,85 @@ body {
 
 .card {
   display: flex;
-  background: #FFF;
   width: 100%;
   height: 70px;
   font-family: "Roboto";
   overflow: hidden;
   font-size: 0.95em;
+  display: flex;
+  justify-content: space-between;
   border-radius: 1em;
   box-shadow: 0 0 0.3em rgba(114, 109, 109, 0.2);
+  background: #fff;
   margin-top: 15px;
   margin-bottom: 15px;
-}
-@media only screen and (min-width: 1080px) {
-  .card {
-    width: 95%;
-  }
+  cursor: pointer;
 }
 .card:hover > .checkbox {
   transform: translate(0px, 0);
-  width: 90px;
 }
 .card:hover > .price {
-  transform: translate(70px, 0);
+  transform: translateX(-70px);
 }
-.card .card-text {
-  background: #FFF;
-  width: 100%;
-  max-height: 70px;
-  position: relative;
-  padding: 10px 10px 10px 10px;
-  overflow: clip;
-}
-.card .card-text .card-title {
-  font-weight: 700;
-  height: 25px;
-}
-.card .card-text .card-subtitle {
-  display: flex;
-  justify-content: space-between;
-  width: 99%;
-  height: 25px;
-  max-height: 25px;
-  font-weight: 100;
-}
-.card .card-text .card-subtitle p {
-  margin: 0;
-  max-height: 25px;
+.card:hover > .card-subtitle {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.card .card-text .card-subtitle > .price {
-  font-weight: 700;
-  margin-left: 10px;
-  margin-right: 10px;
-  transform: translate(0px, 0);
-  transition: all 700ms;
+.card:hover > .card-text {
+  width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.card .checkbox {
+.card:hover > .card-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-text {
+  background: #FFF;
+  width: 90%;
+  max-height: 70px;
+  padding: 10px 10px 10px 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-text .card-title {
+  font-weight: 700;
+  height: 25px;
+}
+.card-text .card-subtitle {
+  margin: 0;
+  height: 25px;
+  max-height: 25px;
+  line-height: 25px;
+  white-space: nowrap;
+  /*white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;*/
+}
+
+.price {
+  height: 100%;
+  width: 10%;
+  transform: translateX(-10px);
+  transition: all 700ms;
+  translate: 70px 0px;
+}
+.price p {
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 12px;
+}
+
+.checkbox {
   display: flex;
   height: auto;
+  width: 90px;
   justify-content: center;
   align-items: center;
   margin-left: 10px;
@@ -147,10 +171,10 @@ body {
   border-top-right-radius: 1em;
   border-bottom-right-radius: 1em;
   background-color: #99E2D0;
-  transform: translate(60px, 0);
+  transform: translate(70px, 0);
   transition: all 700ms;
 }
-.card .checkbox .fas {
+.checkbox .fas {
   color: #FFF;
   font-size: 1.7em;
   transform: rotate(90deg);
@@ -173,11 +197,6 @@ body {
   margin-bottom: 40px;
 }
 
-/*Input*/
-[id=like]:checked + label > .far {
-  visibility: hidden;
-}
-
 .button {
   display: grid;
   justify-items: center;
@@ -193,12 +212,15 @@ body {
   font-weight: bold;
   text-align: center;
   opacity: 1;
-  transition: opacity 300ms;
+  transform: scale(1);
+  transition: transform 300ms, opacity 450ms;
   margin-top: 30px;
   display: block;
 }
 .button .btn-booking:hover {
-  opacity: 0.7;
+  opacity: 0.9;
+  transform: scale(1.1);
+  box-shadow: 0 0 0.5em black;
 }
 
 #restaurant .list-restaurant .fiche-restaurant .heart, .heart-menu {
@@ -216,7 +238,7 @@ body {
   position: relative;
   background: transparent;
   opacity: 1;
-  transition: opacity 300ms;
+  transition: opacity 1000ms;
   transform-origin: bottom;
 }
 #restaurant .list-restaurant .fiche-restaurant .heart .fas, .heart-menu .fas {
@@ -227,11 +249,21 @@ body {
   position: relative;
   right: 24px;
   opacity: 0;
-  transition: opacity 300ms;
+  transition: opacity 1000ms;
   transform-origin: bottom;
 }
 
-/*Full-page*/
+/*Loader*/
+.loader .fas {
+  animation: loader 3000ms backwards ease-in-out alternate;
+  color: #99E2D0;
+  font-size: 5em;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  opacity: 0;
+}
+
 /*Header*/
 header {
   width: 100%;
@@ -242,6 +274,7 @@ header {
   justify-content: center;
   background: #FFF;
   box-shadow: 0px 12px 50px -18px black;
+  animation: pages 4000ms;
 }
 header .header__logo {
   width: 200px;
@@ -258,6 +291,7 @@ header .header__logo {
   margin-top: 1px;
   font-weight: 500;
   color: #353535;
+  animation: pages 4000ms;
 }
 .localisation .fas {
   width: 20px;
@@ -288,6 +322,7 @@ nav {
   align-items: center;
   text-align: center;
   padding: 0 20px 0 20px;
+  animation: pages 4000ms;
 }
 nav h1 {
   font-size: 1.5rem;
@@ -305,17 +340,21 @@ nav .btn__explore {
   font-weight: bold;
   text-align: center;
   opacity: 1;
-  transition: opacity 300ms;
+  transform: scale(1);
+  transition: transform 300ms, opacity 450ms;
   margin-top: 20px;
 }
 nav .btn__explore:hover {
-  opacity: 0.7;
+  opacity: 0.9;
+  transform: scale(1.1);
+  box-shadow: 0 0 0.5em black;
 }
 
 /*Section Explain*/
 .explain {
   background-color: #FFF;
   padding: 40px 0px 40px 0px;
+  animation: pages 4000ms;
 }
 @media only screen and (min-width: 750px) {
   .explain {
@@ -375,7 +414,7 @@ nav .btn__explore:hover {
 .explain .number-explain {
   width: 30px;
   height: 30px;
-  border-radius: 50%;
+  border-radius: 50px;
   position: relative;
   right: 10px;
   text-align: center;
@@ -393,6 +432,7 @@ nav .btn__explore:hover {
   display: flex;
   flex-direction: column;
   padding: 40px 0 40px 0;
+  animation: pages 4000ms;
 }
 @media only screen and (min-width: 750px) {
   #restaurant {
@@ -427,6 +467,7 @@ nav .btn__explore:hover {
 @media only screen and (min-width: 750px) {
   #restaurant .list-restaurant .fiche-restaurant {
     width: 40%;
+    height: 275px;
   }
 }
 @media only screen and (min-width: 1080px) {
@@ -445,6 +486,15 @@ nav .btn__explore:hover {
   object-fit: cover;
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
+}
+#restaurant .list-restaurant .fiche-restaurant .picture--2 {
+  object-position: 0 80%;
+}
+#restaurant .list-restaurant .fiche-restaurant .picture--3 {
+  object-position: 0 55%;
+}
+#restaurant .list-restaurant .fiche-restaurant .picture--4 {
+  object-position: 0 85%;
 }
 #restaurant .list-restaurant .fiche-restaurant .btn-new {
   background: #99E2D0;
@@ -485,6 +535,7 @@ footer {
   font-weight: bold;
   background: #353535;
   padding-left: 20px;
+  animation: pages 4000ms;
 }
 footer .logo-footer {
   height: 20px;
@@ -511,15 +562,24 @@ footer .align-item-footer i {
   margin-right: 10px;
   width: 20px;
 }
+@media only screen and (min-width: 1080px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
-/*@keyframes slidebox {
-    from{
-        transform: translateX(75px);
-    }
-    to{
-        transform: translateX(0px);
-    }
-}*/
+[id=like]:checked + label + .fas {
+  opacity: 1;
+  transition: none;
+}
+
+[id=like]:checked + label .far {
+  opacity: 0;
+  visibility: hidden;
+}
+
 @keyframes card-coming {
   0% {
     transform: translateY(20px);
@@ -534,28 +594,76 @@ footer .align-item-footer i {
   animation: card-coming 1200ms backwards;
 }
 .card--1 {
-  animation-delay: 133.3333333333ms;
+  animation-delay: 120ms;
 }
 .card--2 {
-  animation-delay: 266.6666666667ms;
+  animation-delay: 240ms;
 }
 .card--3 {
-  animation-delay: 400ms;
+  animation-delay: 360ms;
 }
 .card--4 {
-  animation-delay: 533.3333333333ms;
+  animation-delay: 480ms;
 }
 .card--5 {
-  animation-delay: 666.6666666667ms;
+  animation-delay: 600ms;
 }
 .card--6 {
-  animation-delay: 800ms;
+  animation-delay: 720ms;
 }
 .card--7 {
-  animation-delay: 933.3333333333ms;
+  animation-delay: 840ms;
 }
 .card--8 {
-  animation-delay: 1066.6666666667ms;
+  animation-delay: 960ms;
+}
+.card--9 {
+  animation-delay: 1080ms;
+}
+
+@keyframes loader {
+  5% {
+    opacity: 1;
+  }
+  16% {
+    transform: rotate(360deg);
+    opacity: 1;
+    color: #9356DC;
+  }
+  33% {
+    transform: rotate(720deg);
+    opacity: 1;
+    color: #FF79DA;
+  }
+  50% {
+    transform: rotate(1080deg);
+    opacity: 1;
+    color: #99E2D0;
+  }
+  67% {
+    transform: rotate(1440deg);
+    opacity: 1;
+    color: #FF79DA;
+  }
+  83% {
+    transform: rotate(1800deg);
+    opacity: 1;
+    color: #9356DC;
+  }
+  100% {
+    transform: rotate(2160deg);
+  }
+}
+@keyframes pages {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
