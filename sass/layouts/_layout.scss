@@ -34,7 +34,15 @@ body{
     position: relative;
     z-index: 1;
 }
-.bloc-page{
+.illustration_a-la-francaise{
+    object-position: 0px -160px;
+}
+.illustration_delice-des-sens{
+    object-position: 0px -30px;
+    background: rgba(218, 218, 218, 0.911);
+}    
+
+.bloc_page{
     position: relative;
     z-index: 2;
     top: 70px;
@@ -43,7 +51,10 @@ body{
         background: #fff;
     }
 }
-.title-menu{
+.bloc_page-delice-des-sens{
+    top: 60px;
+}
+.menu__title{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -76,7 +87,7 @@ body{
     }
 }
 
-.fiche-menu{
+.menu__courses{
     width: 100%;
     @include mobile{
         width: 420px;
@@ -111,7 +122,7 @@ body{
 .card {
     display: flex;
     width: 100%;
-    height: 80px;
+    height: 90px;
     font-family: $font;
     overflow: hidden;
     font-size: 0.95em;
@@ -132,40 +143,40 @@ body{
         -webkit-transform: translateX(-60px);
         -ms-transform: translateX(-60px);
     }
-    &:hover > .card-subtitle{
+    &:hover > .card__text-subtitle{
         width: 100%;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    &:hover > .card-text{
+    &:hover > .card__text{
         width:70%;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    &:hover > .card-title{
+    &:hover > .card__text-title{
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
 }
-.card-text{
+.card__text{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     background: #FFF;
     width: 90%;
     height: auto;
     padding: $padding-card;   
     
-    .card-title{
+    .card__text-title{
         font-weight: 700;
         overflow: hidden;
         text-overflow: ellipsis;
         
     }
-    .card-subtitle{ 
+    .card__text-subtitle{ 
         margin: 0;
         width: 100%;
         overflow: hidden;
@@ -181,12 +192,12 @@ body{
     -ms-transform: translateX(-10px);
     transition: all 700ms ;
     position: relative;
-    left:70px;
+    left:60px;
 
     p{
         font-weight: bold;
         position: absolute;
-        bottom: 0;
+        bottom: 8px;
         margin-bottom: 12px;
     }
 }

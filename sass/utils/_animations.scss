@@ -1,4 +1,4 @@
-
+/* $card-numbers= number of card +1 */
 $card-numbers:10!default;
 $card-coming-dur:1200ms;
 $card-coming-delay:$card-coming-dur / $card-numbers;
@@ -20,7 +20,7 @@ $card-coming-translate: 20px;
     animation: card-coming $card-coming-dur backwards;
     @for $i from 1 to $card-numbers {
         &--#{$i} {
-            animation-delay: $card-coming-delay * $i;
+            animation-delay: $card-coming-delay * $i ;
         }
     }
 }
@@ -65,9 +65,7 @@ $card-coming-translate: 20px;
     }
 }
 
-$pages-dur: 4000ms;
-
-@keyframes pages {
+@keyframes anim-homepage {
     0%{
         opacity: 0;
     }
@@ -78,4 +76,3 @@ $pages-dur: 4000ms;
         opacity: 1;
     }
 }
-
