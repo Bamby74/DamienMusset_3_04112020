@@ -161,6 +161,8 @@ body{
     
     .card-title{
         font-weight: 700;
+        overflow: hidden;
+        text-overflow: ellipsis;
         
     }
     .card-subtitle{ 
@@ -178,7 +180,8 @@ body{
     -webkit-transform: translateX(-10px);
     -ms-transform: translateX(-10px);
     transition: all 700ms ;
-    translate:70px 0px;
+    position: relative;
+    left:70px;
 
     p{
         font-weight: bold;
