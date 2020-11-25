@@ -149,6 +149,9 @@ body {
   object-position: 0px -30px;
   background: rgba(218, 218, 218, 0.911); }
 
+.illustration_la-note-enchantee {
+  object-position: 0px -30px; }
+
 .bloc_page {
   position: relative;
   z-index: 2;
@@ -324,6 +327,42 @@ body {
   .button .booking-menu {
     margin-top: 10px;
     margin-bottom: 40px; }
+
+input {
+  position: absolute;
+  top: -9999px;
+  visibility: collapse; }
+
+[id="like"]:checked + label .checkbox {
+  -moz-transform: translate(0px, 0);
+  -webkit-transform: translate(0px, 0);
+  -ms-transform: translate(0px, 0); }
+
+[id="like"]:checked + label .price {
+  -moz-transform: translateX(-60px);
+  -webkit-transform: translateX(-60px);
+  -ms-transform: translateX(-60px); }
+
+[id="like"]:checked + label .card__text-subtitle {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+[id="like"]:checked + label .card__text {
+  width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+[id="like"]:checked + label .card__text-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+[id="like"]:checked + label .fas {
+  transform: rotate(360deg);
+  color: #9356DC; }
 
 /*Loader*/
 .loader .fas {
