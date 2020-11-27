@@ -163,6 +163,9 @@ body {
 
 .bloc_page-delice-des-sens {
   top: 60px; }
+  @media only screen and (min-width: 750px) {
+    .bloc_page-delice-des-sens {
+      top: 0px; } }
 
 .menu__title {
   display: flex;
@@ -189,11 +192,18 @@ body {
   align-items: center; }
   @media only screen and (min-width: 500px) {
     .menu {
-      background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash2.jpg");
       background-size: cover; } }
   @media only screen and (min-width: 1080px) {
     .menu {
       align-items: none; } }
+
+@media only screen and (min-width: 500px) {
+  .menu-la-palette-du-gout {
+    background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash2.jpg"); } }
+
+@media only screen and (min-width: 500px) {
+  .menu-la-note-enchantee {
+    background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"); } }
 
 .menu__courses {
   width: 100%; }
@@ -205,6 +215,9 @@ body {
       display: flex;
       justify-content: space-between;
       width: 100%; } }
+  @media only screen and (min-width: 1080px) {
+    .menu__courses .menu_part {
+      width: 30%; } }
 
 .plate {
   margin: 20px 0px 0px 0px;
@@ -323,44 +336,47 @@ body {
   float: right; }
 
 .button {
-  background: #f6f6f6; }
+  background: none; }
   .button .booking-menu {
     margin-top: 10px;
     margin-bottom: 40px; }
+    @media only screen and (min-width: 750px) {
+      .button .booking-menu {
+        margin-top: 40px; } }
 
 input {
   position: absolute;
   top: -9999px;
   visibility: collapse; }
 
-[id="like"]:checked + label .checkbox {
+input:checked + label .checkbox {
   -moz-transform: translate(0px, 0);
   -webkit-transform: translate(0px, 0);
   -ms-transform: translate(0px, 0); }
 
-[id="like"]:checked + label .price {
+input:checked + label .price {
   -moz-transform: translateX(-60px);
   -webkit-transform: translateX(-60px);
   -ms-transform: translateX(-60px); }
 
-[id="like"]:checked + label .card__text-subtitle {
+input:checked + label .card__text-subtitle {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; }
 
-[id="like"]:checked + label .card__text {
+input:checked + label .card__text {
   width: 70%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; }
 
-[id="like"]:checked + label .card__text-title {
+input:checked + label .card__text-title {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; }
 
-[id="like"]:checked + label .fas {
+input:checked + label .fas {
   transform: rotate(360deg);
   color: #9356DC; }
 
@@ -369,9 +385,9 @@ input {
   animation: loader 3000ms backwards ease-in-out alternate;
   color: #99E2D0;
   font-size: 5em;
-  position: absolute;
-  left: 40%;
-  top: 40%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
   opacity: 0; }
 
 /*Header*/
@@ -604,7 +620,9 @@ footer {
   padding: 40px 0 40px 0;
   font-weight: bold;
   background: #353535;
-  padding-left: 20px; }
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
   footer .logo-footer {
     height: 20px;
     filter: invert(100%); }
@@ -620,14 +638,9 @@ footer {
     footer .align-item-footer i {
       margin-right: 10px;
       width: 20px; }
-  @media only screen and (min-width: 750px) {
-    footer {
-      padding-left: 40px; } }
   @media only screen and (min-width: 1080px) {
     footer {
-      display: flex;
-      flex-direction: column;
-      align-items: center; } }
+      display: flex; } }
 
 .footer_homepage {
   animation: anim-homepage 400ms; }

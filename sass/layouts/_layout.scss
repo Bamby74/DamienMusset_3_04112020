@@ -55,6 +55,9 @@ body{
 }
 .bloc_page-delice-des-sens{
     top: 60px;
+    @include large-mobile{
+        top:0px;
+    }
 }
 .menu__title{
     display: flex;
@@ -81,11 +84,20 @@ body{
     background:$background_2; 
     align-items: center;
     @include mobile{
-        background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash2.jpg");
         background-size: cover;
     }
     @include computer{
         align-items: none ;
+    }
+}
+.menu-la-palette-du-gout{
+    @include mobile{
+        background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash2.jpg");
+    }
+}
+.menu-la-note-enchantee{
+    @include mobile{
+        background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
     }
 }
 
@@ -98,6 +110,11 @@ body{
         display: flex;
         justify-content: space-between;
         width: 100%;
+    }
+    .menu_part{
+        @include computer{
+        width: 30%;
+        }
     }
 }
 .plate{
@@ -237,10 +254,13 @@ body{
     @extend %heart;
 }
 .button{
-    background: $background_2;
+    background: none;
     .booking-menu{
         margin-top: 10px;
         margin-bottom: 40px;
+        @include large-mobile{
+            margin-top: 40px;
+        }
     }
 }
 
@@ -249,34 +269,34 @@ input{
     top: -9999px;
     visibility: collapse;
 }
-[id="like"]:checked + label .checkbox {
+input:checked + label .checkbox {
     -moz-transform: translate(0px, 0);
     -webkit-transform: translate(0px, 0);
     -ms-transform: translate(0px, 0);
 }
-[id="like"]:checked + label .price {
+input:checked + label .price {
     -moz-transform: translateX(-60px);
     -webkit-transform: translateX(-60px);
     -ms-transform: translateX(-60px);
 }
-[id="like"]:checked + label .card__text-subtitle{
+input:checked + label .card__text-subtitle{
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
-[id="like"]:checked + label .card__text{
+input:checked + label .card__text{
     width:70%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
-[id="like"]:checked + label .card__text-title{
+input:checked + label .card__text-title{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
-[id="like"]:checked + label .fas{
+input:checked + label .fas{
     transform: rotate(360deg);
     color: $color-primary;
 }

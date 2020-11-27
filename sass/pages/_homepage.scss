@@ -4,9 +4,9 @@
         animation: loader 3000ms backwards ease-in-out alternate;
         color: $color-tertiary;
         font-size: 5em;
-        position: absolute;
-        left: 40%;
-        top: 40%;
+        position: fixed;
+        left: 50%;
+        top: 50%;
         opacity: 0;
     }
 }
@@ -253,7 +253,9 @@ header{
 footer{
     @include footer;
     background: $background-footer;
-    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .logo-footer{
         height: 20px;
         filter: invert(100%);
@@ -274,13 +276,9 @@ footer{
             width: 20px;
         }
     }
-    @include large-mobile {
-        padding-left: 40px;  
-    }
     @include computer{
         display: flex;
-        flex-direction: column;
-        align-items: center;
+
     }
 }
 .footer_homepage{
