@@ -97,7 +97,17 @@ body{
 }
 .menu-la-note-enchantee{
     @include mobile{
-        background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+        background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash2.jpg");
+    }
+}
+.menu-a-la-francaise{
+    @include mobile{
+        background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash2.jpg")
+    }
+}
+.menu-le-delice-des-sens{
+    @include mobile{
+        background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash2.jpg")
     }
 }
 
@@ -264,10 +274,12 @@ body{
     }
 }
 
-input{
-    position: absolute;
-    top: -9999px;
-    visibility: collapse;
+#like,#like2,#like3,#like4,#like5,#like6,#like7,#like8,#like9,#like10{
+    position: relative;
+    width: 0;
+    height: 0;
+    margin: 0;  
+    visibility: hidden;
 }
 input:checked + label .checkbox {
     -moz-transform: translate(0px, 0);
