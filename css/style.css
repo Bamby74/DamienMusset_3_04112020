@@ -109,11 +109,15 @@
     transform-origin: bottom;
     animation: heart-color 700ms linear; }
 
-h1 {
-  font-family: 'Shrikhand'; }
+h1, h2 {
+  font-family: 'Shrikhand';
+  font-size: 2em; }
 
-h2, p {
+h3, h4, h6, p {
   font-family: "Roboto"; }
+
+h4 {
+  margin: 0; }
 
 a {
   text-decoration: none;
@@ -309,7 +313,8 @@ body {
   -ms-transform: translateX(-10px);
   transition: all 700ms;
   position: relative;
-  left: 60px; }
+  left: 60px;
+  font-weight: bold; }
   .price p {
     font-weight: bold;
     position: absolute;
@@ -351,44 +356,6 @@ body {
     @media only screen and (min-width: 750px) {
       .button .booking-menu {
         margin-top: 40px; } }
-
-#like, #like2, #like3, #like4, #like5, #like6, #like7, #like8, #like9, #like10 {
-  position: relative;
-  width: 0;
-  height: 0;
-  margin: 0;
-  visibility: hidden; }
-
-input:checked + label .checkbox {
-  -moz-transform: translate(0px, 0);
-  -webkit-transform: translate(0px, 0);
-  -ms-transform: translate(0px, 0); }
-
-input:checked + label .price {
-  -moz-transform: translateX(-60px);
-  -webkit-transform: translateX(-60px);
-  -ms-transform: translateX(-60px); }
-
-input:checked + label .card__text-subtitle {
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis; }
-
-input:checked + label .card__text {
-  width: 70%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis; }
-
-input:checked + label .card__text-title {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis; }
-
-input:checked + label .fas {
-  transform: rotate(360deg);
-  color: #9356DC; }
 
 /*Loader*/
 .loader .fas {
